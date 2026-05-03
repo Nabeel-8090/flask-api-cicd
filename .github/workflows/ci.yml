@@ -59,3 +59,8 @@ jobs:
       - name: Show summary
         run: |
           echo "Pipeline complete for commit: ${{ github.sha }}"
+
+      - name: Use secret safely
+        run: echo "Secret loaded successfully"
+        env:
+          LAB_SECRET: ${{ secrets.LAB_SECRET }}
